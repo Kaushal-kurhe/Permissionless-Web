@@ -13,10 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
 var cursor = document.getElementById('cursor');
 
 document.addEventListener('mousemove', function (e) {
-  // Update the position of the circle based on mouse coordinates
   cursor.style.left = e.pageX + 'px';
   cursor.style.top = e.pageY + 'px';
-  console.log(e);
 });
 
 var button = document.querySelector('button');
@@ -25,7 +23,6 @@ button.addEventListener('mouseenter', () => {
   cursor.style.cursor = 'none !important';
 });
 
-// Mouse leaves the button
 button.addEventListener('mouseleave', () => {
   cursor.style.transform = 'scale(1) translate(-60%, -50%)';
 });
