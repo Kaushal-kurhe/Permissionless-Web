@@ -8,17 +8,7 @@ html {
   font-family: 'Poppins', sans-serif; /* Use Google Fonts for modern style */
   overflow: hidden; /* Prevent scroll bars for fullscreen layout */
   transition: transform 1s ease-in-out; /* Smooth transition for page move */
-}e
-/* Full-screen container centering */
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
-  color: #ffffff; /* Text color */
-  text-align: center;
-  height: 100vh; /* Ensure full viewport height */
-  transition: transform 1s ease-in-out; /* Smooth transition for body slide */
 }
 
 .Welcome {
@@ -131,4 +121,11 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%);
   transition: transform 0.5s ease;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  background-color: #ff0000;
 }
