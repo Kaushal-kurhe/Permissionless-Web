@@ -1,121 +1,134 @@
 /* Reset and Defaults */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Poppins', sans-serif; /* Use Google Fonts for modern style */
-    overflow: hidden; /* Prevent scroll bars for fullscreen layout */
-    transition: transform 1s ease-in-out; /* Smooth transition for page move */
-  }
-  
-  /* Full-screen container centering */
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: #ffffff; /* Text color */
-    text-align: center;
-    height: 100vh; /* Ensure full viewport height */
-    transition: transform 1s ease-in-out; /* Smooth transition for body slide */
-  }
-  
-  .Welcome{
-    position: absolute;
-    left: -20px;
-    top: -60px;
-    font-size: 3rem; /* Adjust heading size */
-    font-weight: bold; /* Make it stand out */
-    margin: 0;
-    animation: fadeIn 2s ease-in-out; /* Animation for appearance */
-    transition: transform 0.3s ease-in-out; /* Smooth hover interaction */
-  }
-  .container {
-    max-width: 80%; /* For text width constraint */
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Ensure content is centered */
-    z-index: 10;
-  }
-  
-  /* Main Heading Style */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif; /* Use Google Fonts for modern style */
+  overflow: hidden; /* Prevent scroll bars for fullscreen layout */
+  transition: transform 1s ease-in-out; /* Smooth transition for page move */
+}e
+/* Full-screen container centering */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: #ffffff; /* Text color */
+  text-align: center;
+  height: 100vh; /* Ensure full viewport height */
+  transition: transform 1s ease-in-out; /* Smooth transition for body slide */
+}
+
+.Welcome {
+  position: absolute;
+  left: -20px;
+  top: -60px;
+  font-size: 3rem; /* Adjust heading size */
+  font-weight: bold; /* Make it stand out */
+  margin: 0;
+  animation: fadeIn 2s ease-in-out; /* Animation for appearance */
+  transition: transform 0.3s ease-in-out; /* Smooth hover interaction */
+}
+.container {
+  max-width: 80%; /* For text width constraint */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Ensure content is centered */
+  z-index: 10;
+}
+
+/* Main Heading Style */
+.main-text {
+  font-size: 3rem; /* Adjust heading size */
+  font-weight: bold; /* Make it stand out */
+  margin: 0;
+  animation: fadeIn 2s ease-in-out; /* Animation for appearance */
+  transition: transform 0.3s ease-in-out; /* Smooth hover interaction */
+}
+
+/* Subheading Style */
+.sub-text {
+  font-size: 1.5rem; /* Slightly smaller than heading */
+  margin-top: 10px;
+  opacity: 0.8;
+  animation: fadeIn 3s ease-in-out; /* Staggered fade-in */
+}
+
+/* Hover Effect */
+.main-text:hover {
+  color: #ff6f61; /* Change color on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Button Styling */
+.enter {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+.enter:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enter:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
   .main-text {
-    font-size: 3rem; /* Adjust heading size */
-    font-weight: bold; /* Make it stand out */
-    margin: 0;
-    animation: fadeIn 2s ease-in-out; /* Animation for appearance */
-    transition: transform 0.3s ease-in-out; /* Smooth hover interaction */
+    font-size: 2.5rem; /* Reduce heading size */
   }
-  
-  /* Subheading Style */
+
   .sub-text {
-    font-size: 1.5rem; /* Slightly smaller than heading */
-    margin-top: 10px;
-    opacity: 0.8;
-    animation: fadeIn 3s ease-in-out; /* Staggered fade-in */
+    font-size: 1.2rem; /* Reduce subheading size */
   }
-  
-  /* Hover Effect */
-  .main-text:hover {
-    color: #ff6f61; /* Change color on hover */
-    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
   }
-  
-  /* Button Styling */
-  .enter {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    margin-top: 30px;
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
   }
-  
-  .enter:hover {
-    background: linear-gradient(45deg, #2575fc, #6a11cb);
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .enter:active {
-    transform: scale(0.95);
-  }
-  
-  /* Responsive Design for Mobile */
-  @media (max-width: 768px) {
-    .main-text {
-      font-size: 2.5rem; /* Reduce heading size */
-    }
-  
-    .sub-text {
-      font-size: 1.2rem; /* Reduce subheading size */
-    }
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px); /* Start slightly below */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0); /* End at normal position */
-    }
-  }
-  
-  /* Slide-up effect */
-  .slide-up {
-    transform: translateY(-100vh); /* Move the entire page up */
-  }
-  
+}
+
+/* Slide-up effect */
+.slide-up {
+  transform: translateY(-100vh); /* Move the entire page up */
+}
+
+/* Dnyaneshwar Supekar Css */
+
+#cursor {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, transparent, #a5f71b);
+  position: absolute;
+  z-index: 9999;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s ease;
+}
